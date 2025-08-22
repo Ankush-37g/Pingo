@@ -1,6 +1,6 @@
-import User from '../models/User.js'
+import User from '../models/UserModel.js'
 import asyncHandler from '../utils/asynHandler.js'
-import ApiError from '../utils/ApiError.js'
+import {ApiError} from '../utils/ApiError.js'
 
 export const protectRoute = asyncHandler( async (req, res, next)=> {
 

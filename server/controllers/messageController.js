@@ -1,7 +1,7 @@
 import User from "../models/UserModel.js"
 import asyncHandler from "../utils/asynHandler.js"
 import Message from "../models/MessageModel.js"
-import { ApiResponse } from "../utils/ApiResponse"
+import { ApiResponse } from "../utils/ApiResponse.js"
 import { io, userSocketMap } from "../server.js"
 
 //Getting all the users for chatting in sidebar
@@ -97,5 +97,7 @@ const sendMessage = asyncHandler( async(req, res)=> {
 
 
 })
+
+export {getUsersForSidebar,markMessageAsSeen,sendMessage,getMessages}
 
 

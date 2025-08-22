@@ -1,9 +1,9 @@
 import { ApiError } from "../utils/ApiError.js";
 import asyncHandler from "../utils/asynHandler.js";
-import User from '../models/User.js'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import { ApiResponse } from "../utils/ApiResponse.js";
+import User from "../models/UserModel.js";
 
 const generateToken = (userId) => {
     
@@ -86,4 +86,4 @@ const updateProfile = asyncHandler( async (req, res) =>{
      }
 })
 
-export {signup,login}
+export {signup,login,updateProfile}

@@ -1,4 +1,4 @@
-const asynHandler = (fn) => {
+const asyncHandler = (fn) => {
 
     return (req,res,next) => {
 
