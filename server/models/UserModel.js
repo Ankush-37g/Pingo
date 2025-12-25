@@ -10,8 +10,8 @@ const userSchema = new mongoose.Schema({
     bio: {type: String},
 },{timestamps: true})
 
-userSchema.methods.isPasswordCorrect = (password) => {
-    return bcrypt.compare(this.password,password)
+userSchema.methods.isPasswordCorrect = async (password) => {
+    return await bcrypt.compare(password,this.password)
 }
 
 const User = mongoose.models.User || mongoose.model("User",userSchema) 
